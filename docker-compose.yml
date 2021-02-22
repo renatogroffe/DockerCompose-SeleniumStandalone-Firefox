@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  selenium-firefox:
+    image: selenium/standalone-firefox:4.0.0-beta-1-20210215
+    ports:
+      - "4444:4444"
+    networks:
+      - testes-selenium
+networks: 
+  testes-selenium:
+    driver: bridge
